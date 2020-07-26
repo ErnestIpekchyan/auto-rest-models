@@ -23,3 +23,11 @@ INSTALLED_APPS = [
     'auto_rest_models',
 ]
 ```
+
+- Include `auto_rest_models.urls` in your urls.py:
+
+```
+urlpatterns += [
+    path('', include('auto_rest_models.urls'))
+]
+```
