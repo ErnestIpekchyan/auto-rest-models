@@ -1,0 +1,11 @@
+README.md
+setup.py
+auto_api/__init__.py
+auto_api/apps.py
+auto_api/serializers.py
+auto_api/urls.py
+auto_api/views.py
+auto_rest_models.egg-info/PKG-INFO
+auto_rest_models.egg-info/SOURCES.txt
+auto_rest_models.egg-info/dependency_links.txt
+auto_rest_models.egg-info/top_level.txt
