@@ -87,7 +87,20 @@ class TestModelApi:
         assert len(response.json()) == 2
 
     def test_asc_ordering_dogs(self, client):
-        pass
+        Dog.objects.create(name='Charlie', age=3)
+
+        url = reverse(
+            'models-list',
+            args=[self.APP_NAME, self.MODEL_NAME]
+        ) + '?ordering=age'
+        response = client.get(url)
+        assert response.status_code == 200
+
+        result_data = [
+            {'id': 2, 'name': 'Charlie', 'age': 3},
+            {'id': 1, 'name': 'Charlie', 'age': 5},
+        ]
+        assert response.json() == result_data
 
     def test_desc_ordering_dogs(self, client):
         pass
