@@ -1,6 +1,8 @@
 from django.apps import apps
 from rest_framework import viewsets
 
+from auto_api.serializers import get_generic_serializer
+
 
 class GenericModelViewSet(viewsets.ModelViewSet):
 
@@ -11,4 +13,7 @@ class GenericModelViewSet(viewsets.ModelViewSet):
         return model_class.objects.all()
 
     def get_serializer_class(self):
-        pass
+        app_name = self.kwargs['app_name']
+        model_name = self.kwargs['model_name']
+        model_class = apps.get_model(app_name, model_name)
+        return get_generic_serializer(model_class)
