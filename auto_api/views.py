@@ -8,9 +8,12 @@ class GenericModelViewSet(viewsets.ModelViewSet):
 
     def initial(self, request, *args, **kwargs):
         super().initial(request, *args, **kwargs)
+        self.model_class = self.get_model_class()
+
+    def get_model_class(self):
         app_name = self.kwargs['app_name']
         model_name = self.kwargs['model_name']
-        self.model_class = apps.get_model(app_name, model_name)
+        return apps.get_model(app_name, model_name)
 
     def get_queryset(self):
         return self.model_class.objects.all()
