@@ -34,7 +34,12 @@ class TestModelApi:
         assert Dog.objects.filter(**data)
 
     def test_retrieve_dog(self, client):
-        pass
+        url = reverse(
+            'models-detail',
+            args=[self.APP_NAME, self.MODEL_NAME, self.dog.pk]
+        )
+        response = client.get(url)
+        assert response.status_code == 200
 
     def test_retrieve_non_existent_dog(self, client):
         pass
