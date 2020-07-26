@@ -32,3 +32,25 @@ urlpatterns += [
     path('', include('auto_rest_models.urls'))
 ]
 ```
+
+# Usage
+
+- URL to get a list of objects (`GET` request):
+
+```/<app_name>/<model_name>/```
+
+- URL to create an object (`POST` request):
+
+```/<app_name>/<model_name>/```
+
+- URL to get the object (`GET` request):
+
+```/<app_name>/<model_name>/<pk>```
+
+- URL to update the object (`PUT` request):
+
+```/<app_name>/<model_name>/<pk>```
+
+- URL to delete the object (`DELETE` request):
+
+```/<app_name>/<model_name>/<pk>```
