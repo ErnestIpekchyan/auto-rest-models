@@ -8,4 +8,5 @@ Provides automatic REST API for models in Django project
 
 # Installation
 - Clone this repository
+
 ```https://github.com/ErnestIpekchyan/auto-rest-models.git```
