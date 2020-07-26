@@ -41,6 +41,9 @@ class TestModelApi:
         response = client.get(url)
         assert response.status_code == 200
 
+        result_data = {'id': 1, 'name': 'Charlie', 'age': 5}
+        assert response.json() == result_data
+
     def test_retrieve_non_existent_dog(self, client):
         pass
 
