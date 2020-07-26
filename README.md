@@ -12,7 +12,7 @@ Provides automatic REST API for models in Django project
 
 ```
 cd
-https://github.com/ErnestIpekchyan/auto-rest-models.git
+git clone https://github.com/ErnestIpekchyan/auto-rest-models.git
 ```
 
 - Install `auto_rest_models` to your application:
