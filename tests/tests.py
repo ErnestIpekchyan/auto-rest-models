@@ -56,7 +56,13 @@ class TestModelApi:
         pass
 
     def test_delete_dog(self, client):
-        pass
+        url = reverse(
+            'models-detail',
+            args=[self.APP_NAME, self.MODEL_NAME, self.dog.pk]
+        )
+        response = client.delete(url)
+        assert response.status_code == 204
+        assert not Dog.objects.filter(pk=self.dog.pk)
 
     def test_filter_dogs(self, client):
         pass
