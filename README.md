@@ -7,11 +7,11 @@ Provides automatic REST API for models in Django project
 - djangorestframework 3.11.0
 
 # Installation
-- Clone this repository
+- Clone this repository:
 
 ```https://github.com/ErnestIpekchyan/auto-rest-models.git```
 
-- Install `auto_rest_models` to your application
+- Install `auto_rest_models` to your application:
 
 ```pip install ~/auto_rest_models/dist/auto_rest_models-0.0.1-py3-none-any.whl```
 
