@@ -75,7 +75,16 @@ class TestModelApi:
         assert not Dog.objects.filter(pk=self.dog.pk)
 
     def test_filter_dogs(self, client):
-        pass
+        Dog.objects.create(name='Charlie', age=3)
+        Dog.objects.create(name='Charlie', age=5)
+
+        url = reverse(
+            'models-list',
+            args=[self.APP_NAME, self.MODEL_NAME]
+        ) + '?name=Charlie&age=5'
+        response = client.get(url)
+        assert response.status_code == 200
+        assert len(response.json()) == 2
 
     def test_asc_ordering_dogs(self, client):
         pass
