@@ -13,6 +13,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ErnestIpekchyan/auto-rest-models",
     packages=setuptools.find_packages(exclude=['tests*']),
+    install_requires=[
+       'djangorestframework>=3.11.0',
+       'django-filter>=2.3.0'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
