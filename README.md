@@ -82,3 +82,9 @@ urlpatterns += [
 /<app_name>/<model_name>/?ordering=-field1 (sort in descending order)
 /<app_name>/<model_name>/?ordering=field1,field2 (sort by multiple fields)
 ```
+
+- Paginate objects with:
+
+```
+/<app_name>/<model_name>/?limit=2
+```
