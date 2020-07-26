@@ -1,1 +1,1 @@
-auto_api
+auto_rest_models

@@ -3,7 +3,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters
 from rest_framework.pagination import LimitOffsetPagination
 
-from auto_api.serializers import get_generic_serializer
+from auto_rest_models.serializers import get_generic_serializer
 
 
 class GenericModelViewSet(viewsets.ModelViewSet):

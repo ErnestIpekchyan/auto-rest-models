@@ -1,10 +1,10 @@
 README.md
 setup.py
-auto_api/__init__.py
-auto_api/apps.py
-auto_api/serializers.py
-auto_api/urls.py
-auto_api/views.py
+auto_rest_models/__init__.py
+auto_rest_models/apps.py
+auto_rest_models/serializers.py
+auto_rest_models/urls.py
+auto_rest_models/views.py
 auto_rest_models.egg-info/PKG-INFO
 auto_rest_models.egg-info/SOURCES.txt
 auto_rest_models.egg-info/dependency_links.txt
