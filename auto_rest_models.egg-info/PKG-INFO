@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: auto-rest-models
 Version: 0.0.1
-Summary: auto REST API for models in Django project
+Summary: Provides automatic REST API for models in Django project
 Home-page: https://github.com/ErnestIpekchyan/auto-rest-models
 Author: Ernest Ipekchyan
 Author-email: ghost199632@gmail.com
 License: UNKNOWN
-Description: # auto-rest-models
-        REST API for all models in project
+Description: # Auto-Rest-Models
+        Provides automatic REST API for models in Django project
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
