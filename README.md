@@ -5,6 +5,7 @@ Provides automatic REST API for models in Django project
 - Python 3.8.2
 - Django 3.0.8
 - djangorestframework 3.11.0
+- django-filter 2.3.0
 
 # Installation
 - Clone this repository:
