@@ -1,2 +1,2 @@
-# auto-rest-models
-REST API for all models in project
+# Auto-Rest-Models
+Provides automatic REST API for models in Django project

@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="Ernest Ipekchyan",
     author_email="ghost199632@gmail.com",
-    description="auto REST API for models in Django project",
+    description="Provides automatic REST API for models in Django project",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ErnestIpekchyan/auto-rest-models",
