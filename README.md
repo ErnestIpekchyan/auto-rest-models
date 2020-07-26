@@ -92,7 +92,7 @@ urlpatterns += [
 
 # Testing
 
-- Copy the `~/auto_rest_models/tests/` app directory to the root of your application
+- Copy the `~/auto-rest-models/tests/` app directory to the root of your application
 
 - Add `tests` to INSTALLED_APPS in settings.py:
 
@@ -109,7 +109,7 @@ INSTALLED_APPS = [
 pip install pytest-django
 ```
 
-- Open `~/auto_rest_models/tests/pytest.ini` file and change `DJANGO_SETTINGS_MODULE` with:
+- Open `~/auto-rest-models/tests/pytest.ini` file and change `DJANGO_SETTINGS_MODULE` with:
 
 ```
 DJANGO_SETTINGS_MODULE = <your_project_name>.settings
