@@ -13,14 +13,16 @@ class GenericModelViewSet(viewsets.ModelViewSet):
     def initial(self, request, *args, **kwargs):
         super().initial(request, *args, **kwargs)
         self.model_class = self.get_model_class()
-
-        model_fields = self.model_class._meta.get_fields()
-        self.filterset_fields = [field.name for field in model_fields]
+        self.filterset_fields = self.get_filterset_fields()
 
     def get_model_class(self):
         app_name = self.kwargs['app_name']
         model_name = self.kwargs['model_name']
         return apps.get_model(app_name, model_name)
+
+    def get_filterset_fields(self):
+        model_fields = self.model_class._meta.get_fields()
+        return [field.name for field in model_fields]
 
     def get_queryset(self):
         return self.model_class.objects.all()
