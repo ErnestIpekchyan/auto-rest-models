@@ -14,3 +14,12 @@ Provides automatic REST API for models in Django project
 - Install `auto_rest_models` to your application
 
 ```pip install ~/auto_rest_models/dist/auto_rest_models-0.0.1-py3-none-any.whl```
+
+- Add `auto_rest_models` to INSTALLED_APPS in settings.py:
+
+```
+INSTALLED_APPS = [
+    # other apps
+    'auto_rest_models',
+]
+```
