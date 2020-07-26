@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from auto_api.views import GenericModelViewSet
+from auto_rest_models.views import GenericModelViewSet
 
 router = DefaultRouter()
 router.register(
