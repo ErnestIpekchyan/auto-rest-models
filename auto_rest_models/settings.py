@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'auto_api.apps.AutoApiConfig',
     'rest_framework',
     'django_filters',
+    'tests',
 ]
 
 MIDDLEWARE = [
