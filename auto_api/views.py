@@ -14,6 +14,9 @@ class GenericModelViewSet(viewsets.ModelViewSet):
         super().initial(request, *args, **kwargs)
         self.model_class = self.get_model_class()
 
+        model_fields = self.model_class._meta.get_fields()
+        self.filterset_fields = [field.name for field in model_fields]
+
     def get_model_class(self):
         app_name = self.kwargs['app_name']
         model_name = self.kwargs['model_name']
