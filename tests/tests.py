@@ -53,7 +53,13 @@ class TestModelApi:
         assert response.status_code == 404
 
     def test_update_dog(self, client):
-        pass
+        data = {'name': 'Richard', 'age': 7}
+        url = reverse(
+            'models-detail',
+            args=[self.APP_NAME, self.MODEL_NAME, self.dog.pk]
+        )
+        response = client.put(url, data=data, content_type='application/json')
+        assert response.status_code == 200
 
     def test_delete_dog(self, client):
         url = reverse(
