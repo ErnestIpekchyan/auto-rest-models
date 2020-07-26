@@ -10,4 +10,4 @@ class Dog(models.Model):
         verbose_name_plural = 'Собаки'
 
     def __str__(self):
-        return ''
+        return self.name
