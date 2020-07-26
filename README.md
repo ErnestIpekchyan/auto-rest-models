@@ -109,6 +109,12 @@ INSTALLED_APPS = [
 pip install pytest-django
 ```
 
+- Open `~/auto_rest_models/tests/pytest.ini` file and change `DJANGO_SETTINGS_MODULE` with:
+
+```
+DJANGO_SETTINGS_MODULE = <your_project_name>.settings
+```
+
 - Run tests with the following command:
 
 ```
