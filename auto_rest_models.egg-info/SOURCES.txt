@@ -8,4 +8,5 @@ auto_rest_models/views.py
 auto_rest_models.egg-info/PKG-INFO
 auto_rest_models.egg-info/SOURCES.txt
 auto_rest_models.egg-info/dependency_links.txt
+auto_rest_models.egg-info/requires.txt
 auto_rest_models.egg-info/top_level.txt
