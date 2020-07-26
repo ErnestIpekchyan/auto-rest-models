@@ -11,6 +11,7 @@ Provides automatic REST API for models in Django project
 - Clone this repository:
 
 ```
+cd
 https://github.com/ErnestIpekchyan/auto-rest-models.git
 ```
 
