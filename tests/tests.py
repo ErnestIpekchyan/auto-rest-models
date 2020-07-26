@@ -46,7 +46,7 @@ class TestModelApi:
 
     def test_retrieve_non_existent_dog(self, client):
         url = reverse(
-            'model-detail',
+            'models-detail',
             args=[self.APP_NAME, self.MODEL_NAME, self.dog.pk + 1]
         )
         response = client.get(url)
