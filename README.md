@@ -89,3 +89,28 @@ urlpatterns += [
 ```
 /<app_name>/<model_name>?limit=2
 ```
+
+# Testing
+
+- Copy the `~/auto_rest_models/tests/` app directory to the root of your application
+
+- Add `tests` to INSTALLED_APPS in settings.py:
+
+```
+INSTALLED_APPS = [
+    # other apps
+    'tests',
+]
+```
+
+- Install `pytest-django`:
+
+```
+pip install pytest-django
+```
+
+- Run tests with the following command:
+
+```
+pytest -s tests/
+```
