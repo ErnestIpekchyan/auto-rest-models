@@ -61,6 +61,10 @@ class TestModelApi:
         response = client.put(url, data=data, content_type='application/json')
         assert response.status_code == 200
 
+        result_data = {'id': 1, 'name': 'Richard', 'age': 7}
+        assert response.json() == result_data
+        assert Dog.objects.filter(**result_data)
+
     def test_delete_dog(self, client):
         url = reverse(
             'models-detail',
