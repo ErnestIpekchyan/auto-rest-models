@@ -13,13 +13,7 @@ class GenericModelViewSet(viewsets.ModelViewSet):
         self.model_class = apps.get_model(app_name, model_name)
 
     def get_queryset(self):
-        app_name = self.kwargs['app_name']
-        model_name = self.kwargs['model_name']
-        model_class = apps.get_model(app_name, model_name)
-        return model_class.objects.all()
+        return self.model_class.objects.all()
 
     def get_serializer_class(self):
-        app_name = self.kwargs['app_name']
-        model_name = self.kwargs['model_name']
-        model_class = apps.get_model(app_name, model_name)
-        return get_generic_serializer(model_class)
+        return get_generic_serializer(self.model_class)
