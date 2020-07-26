@@ -24,7 +24,14 @@ class TestModelApi:
         assert response.json() == result_data
 
     def test_create_dog(self, client):
-        pass
+        data = {'name': 'Richard', 'age': 10}
+        url = reverse(
+            'models-list',
+            args=[self.APP_NAME, self.MODEL_NAME]
+        )
+        response = client.post(url, data=data)
+        assert response.status_code == 201
+        assert Dog.objects.filter(**data)
 
     def test_retrieve_dog(self, client):
         pass
