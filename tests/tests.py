@@ -74,4 +74,14 @@ class TestModelApi:
         pass
 
     def test_paginate_dogs(self, client):
-        pass
+        Dog.objects.create(name='Charlie', age=3)
+        Dog.objects.create(name='Charlie', age=5)
+
+        url = reverse(
+            'models-list',
+            args=[self.APP_NAME, self.MODEL_NAME]
+        ) + '?limit=2'
+        response = client.get(url)
+        assert response.status_code == 200
+        assert 'results' in response.json()
+        assert len(response.json()['results']) == 2
