@@ -54,3 +54,15 @@ urlpatterns += [
 - URL to delete the object (`DELETE` request):
 
 ```/<app_name>/<model_name>/<pk>```
+
+- Filter objects with:
+
+```/<app_name>/<model_name>/?field1=val1&field2=val2```
+
+- Sort objects with:
+
+```/<app_name>/<model_name>/?ordering=field1``` - to sort in ascending order
+
+```/<app_name>/<model_name>/?ordering=-field1``` - to sort in descending order
+
+```/<app_name>/<model_name>/?ordering=field1,field2``` - to sort by multiple fields
