@@ -26,6 +26,8 @@ pip install ~/auto-rest-models/dist/auto_rest_models-0.0.1-py3-none-any.whl
 ```
 INSTALLED_APPS = [
     # other apps
+    'rest_framework',
+    'django_filters',
     'auto_rest_models',
 ]
 ```
