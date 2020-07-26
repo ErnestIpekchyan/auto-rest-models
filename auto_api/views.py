@@ -1,4 +1,5 @@
 from django.apps import apps
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters
 from rest_framework.pagination import LimitOffsetPagination
 
@@ -6,7 +7,7 @@ from auto_api.serializers import get_generic_serializer
 
 
 class GenericModelViewSet(viewsets.ModelViewSet):
-    filter_backends = [filters.OrderingFilter]
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     pagination_class = LimitOffsetPagination
 
     def initial(self, request, *args, **kwargs):
